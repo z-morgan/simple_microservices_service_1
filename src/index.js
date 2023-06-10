@@ -1,4 +1,5 @@
 import express from 'express';
+import fetch from 'node-fetch';
 
 const app = express();
 app.use(express.json());
@@ -17,7 +18,7 @@ app.get('/users/:userId', async (req, res) => {
 
   // request user data from user_service
   // update URL to match deployed user_service
-  const userRes = await fetch(`http://localhost:3001/users/${req.params.userId}`, options);
+  const userRes = await fetch(`http://34.217.11.86:3001/users/${req.params.userId}`, options);
   const user = await userRes.json();
 
   // leave evidence that the data passed through this service
