@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node src/index.js",
-    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "pact:publish": "pact-broker publish ./pacts --consumer-app-version=1 --auto-detect-version-properties --broker-base-url=http://localhost:9292"
   },
   "keywords": [],
   "author": "",
